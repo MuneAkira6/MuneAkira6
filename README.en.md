@@ -16,6 +16,8 @@ The repositories here rebuild, in a form that can be published, the methods I us
 | Test automation | A coverage ledger whose denominator is the functional spec, and a quality gate that tells four kinds of red apart (new, declared, inconclusive, went green) | UI coverage 22.1% → 83.9% (including existing QA assets) | [Case 02](https://github.com/MuneAkira6/engineering-case-studies/blob/main/02-test-automation-and-quality-gates.md) · [regression-gate-demo](https://github.com/MuneAkira6/regression-gate-demo) |
 | CI and developer experience | PR compile checks on a self-hosted runner, tracing non-deterministic build failures, devcontainer I/O, an automated OSS license inventory | PR compile check in about 3 minutes, no hosted minutes used | [Case 03](https://github.com/MuneAkira6/engineering-case-studies/blob/main/03-ci-and-developer-experience.md) · [ci-devex-toolkit](https://github.com/MuneAkira6/ci-devex-toolkit) |
 | AI agents | The long-lived bus with unattended goals, and spec-driven development with spec-kit | 18 bus runs, longest unattended stretch 16 h 37 min; 46 spec folders | [Case 04](https://github.com/MuneAkira6/engineering-case-studies/blob/main/04-unattended-goal-bus.md) · [Case 05](https://github.com/MuneAkira6/engineering-case-studies/blob/main/05-spec-driven-development.md) |
+| AI in daily work | Skills with evals, a stand-up digest where rules decide and a language model writes only short sentences, rolling them out to the team | 7 skills with evals; the digest uses about 7k tokens a day | [Case 06](https://github.com/MuneAkira6/engineering-case-studies/blob/main/06-ai-in-daily-engineering.md) · [agent-skills-with-evals](https://github.com/MuneAkira6/agent-skills-with-evals) |
+| Other work | Collapsing an N+1 in report exports, a deadlock from thread starvation, a build tool migration | DB requests per export 2,055 → 16 (synthetic data at 1,000 users, byte-identical CSVs) | [Case 07](https://github.com/MuneAkira6/engineering-case-studies/blob/main/07-other-work.md) · [labs](https://github.com/MuneAkira6/labs) |
 
 ## Two methods
 
@@ -27,8 +29,8 @@ The repositories here rebuild, in a form that can be published, the methods I us
   the spec folder is the requirement, a human rules on every clarification one by one, and every verdict is
   PASS, FAIL, BLOCKED or DEFERRED with its evidence.
 
-Four repositories of this portfolio were themselves built by unattended bus runs from a contract written first
-(221 verdict rows over four runs, no human intervention — figures from the demos).
+Six repositories of this portfolio were themselves built by unattended bus runs from a contract written first
+(387 verdict rows over six runs, one human intervention to fix a problem — figures from the demos).
 
 ## Repositories
 
@@ -39,6 +41,8 @@ Four repositories of this portfolio were themselves built by unattended bus runs
 | [idp-tenant-integration-demo](https://github.com/MuneAkira6/idp-tenant-integration-demo) | A runnable demo of adding IdP sign-in to an existing SaaS, with its full spec folder and the record of its unattended build |
 | [regression-gate-demo](https://github.com/MuneAkira6/regression-gate-demo) | A Playwright regression suite, coverage against the manual test sheet, and a four-class quality gate |
 | [ci-devex-toolkit](https://github.com/MuneAkira6/ci-devex-toolkit) | An OSS license inventory, a two-repositories-one-worktree helper, a PR compile check, a devcontainer I/O harness |
+| [agent-skills-with-evals](https://github.com/MuneAkira6/agent-skills-with-evals) | Three skills with their eval suites (a trigger-rate probe, a verifying fetcher, a stand-up digest) and the measured numbers, the unflattering ones included |
+| [labs](https://github.com/MuneAkira6/labs) | Three small experiments: a report N+1 proved byte-identical against goldens, thread starvation under blocking await, a webpack to Rsbuild migration |
 | [engineering-case-studies](https://github.com/MuneAkira6/engineering-case-studies) | Seven case studies of the work above (in Japanese) |
 
 ## Scale of the job

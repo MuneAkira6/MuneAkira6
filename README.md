@@ -16,6 +16,8 @@
 | テスト自動化 | 機能仕様書を分母にしたカバレッジ台帳と、失敗を四つ（新しい赤・申告済みの赤・判定不能・緑に戻った）に分ける品質ゲート | UI カバレッジ 22.1% → 83.9%（既存の QA 資産を含む） | [事例 02](https://github.com/MuneAkira6/engineering-case-studies/blob/main/02-test-automation-and-quality-gates.md) ・ [regression-gate-demo](https://github.com/MuneAkira6/regression-gate-demo) |
 | CI・開発体験 | self-hosted runner での PR コンパイルチェック、非決定的なビルド失敗の切り分け、devcontainer の改善、OSS ライセンス一覧の自動生成 | PR コンパイルチェック約 3 分、Actions の課金枠の使用なし | [事例 03](https://github.com/MuneAkira6/engineering-case-studies/blob/main/03-ci-and-developer-experience.md) ・ [ci-devex-toolkit](https://github.com/MuneAkira6/ci-devex-toolkit) |
 | AI エージェント | 長命バス方式（無人で goal を回す）と、仕様駆動開発（spec-kit） | バス方式の運用 18 回・最長の無人区間 16 時間 37 分。仕様フォルダ 46 件 | [事例 04](https://github.com/MuneAkira6/engineering-case-studies/blob/main/04-unattended-goal-bus.md) ・ [事例 05](https://github.com/MuneAkira6/engineering-case-studies/blob/main/05-spec-driven-development.md) |
+| 日々の AI 活用 | 評価つきのスキル、規則が決めて LLM は短い文だけを書く朝会ダイジェスト、チームへの展開 | 評価付きのスキル 7 個。朝会ダイジェストの消費は 1 日約 7k トークン | [事例 06](https://github.com/MuneAkira6/engineering-case-studies/blob/main/06-ai-in-daily-engineering.md) ・ [agent-skills-with-evals](https://github.com/MuneAkira6/agent-skills-with-evals) |
+| その他 | レポートの N+1 の解消、スレッド枯渇によるデッドロック、ビルドツールの移行 | レポートの DB 要求を 1 回の出力あたり 2,055 回 → 16 回（1,000 人規模の合成データ、CSV はバイト一致） | [事例 07](https://github.com/MuneAkira6/engineering-case-studies/blob/main/07-other-work.md) ・ [labs](https://github.com/MuneAkira6/labs) |
 
 ## 二つの方法
 
@@ -26,8 +28,8 @@
   フォルダを要件の正本にし、clarify では人が一件ずつ裁定し、判定は証拠つきで PASS / FAIL / BLOCKED / DEFERRED に
   分けます。
 
-このポートフォリオのうち 4 つのリポジトリは、仕様と契約を先に書き、それ自体をバス方式で無人実装しました
-（4 回の実行で判定 221 行、人の介入 0 回。デモの実測値です）。
+このポートフォリオのうち 6 つのリポジトリは、仕様と契約を先に書き、それ自体をバス方式で無人実装しました
+（6 回の実行で判定 387 行、問題を直すための人の介入 1 回。デモの実測値です）。
 
 ## リポジトリ
 
@@ -38,6 +40,8 @@
 | [idp-tenant-integration-demo](https://github.com/MuneAkira6/idp-tenant-integration-demo) | 既存の SaaS に IdP ログインを後付けする、動くデモ。仕様一式と無人実装の記録つき |
 | [regression-gate-demo](https://github.com/MuneAkira6/regression-gate-demo) | Playwright の回帰スイート、手動テストシートを分母にしたカバレッジ、四分類の品質ゲート |
 | [ci-devex-toolkit](https://github.com/MuneAkira6/ci-devex-toolkit) | OSS ライセンス一覧、2 リポジトリ・1 作業ツリー、PR コンパイルチェック、devcontainer の I/O 計測 |
+| [agent-skills-with-evals](https://github.com/MuneAkira6/agent-skills-with-evals) | 評価つきのスキル 3 本（起動率のプローブ、検証つきの取得、朝会ダイジェスト）と、測った数字を都合の悪いものも含めて載せた記録 |
+| [labs](https://github.com/MuneAkira6/labs) | 小さな 3 つの実験：レポートの N+1（金型とのバイト一致）、ブロッキング待機によるスレッド枯渇、webpack から Rsbuild への移行 |
 | [engineering-case-studies](https://github.com/MuneAkira6/engineering-case-studies) | 上の取り組みの事例集（7 本） |
 
 ## 実務の規模
