@@ -1,11 +1,12 @@
 # So Ryo
 
-Web engineer in Japan, about four years. React / TypeScript on the front end, Scala / Play Framework on the server.
+Web engineer in Japan. I mostly write React and TypeScript.
 
-React / TypeScript を軸に、Web エンジニアとして約 4 年働いています。いまは B2B SaaS の Web 画面と API（Scala / Play Framework）の両方を担当しています。
+Things I'm working on:
 
-- 既存のサービスを、グループ共通の認証基盤（OAuth 2.0 / OpenID Connect）につなぐ開発
-- Playwright での UI テストの自動化
-- サーバーの不具合調査、フロントエンドのビルド移行
+- Two patches to MediaWiki, the software behind Wikipedia, so that multilingual SVGs follow the reader's choice of Simplified or Traditional Chinese. In review: [1369683](https://gerrit.wikimedia.org/r/c/mediawiki/core/+/1369683), [1369684](https://gerrit.wikimedia.org/r/c/mediawiki/core/+/1369684) ([T310453](https://phabricator.wikimedia.org/T310453))
+- [measured-lut](https://github.com/MuneAkira6/measured-lut): fits a 3D LUT from photo pairs of the same scene, in the browser
 
-日本語（JLPT N1）、中国語（母語）、英語
+I also edit Chinese Wikipedia, mostly local history and maps. [Blog](https://muneakira6.github.io/)
+
+Chinese (native) · Japanese (JLPT N1) · English
